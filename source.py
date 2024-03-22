@@ -45,7 +45,7 @@ def generateData(n_Classes, n_Elem):
     for i in range(n_Classes):
         centX, centY = random.random() * 7.0, random.random() * 7.0
         for _ in range(n_Elem):
-            data.append([[random.gauss(centX, 0.3), random.gauss(centY, 0.3)], i])
+            data.append([[random.gauss(centX, 0.2), random.gauss(centY, 0.2)], i])
     return data
 
 
@@ -59,7 +59,7 @@ def randColor():
 
 def main():
     # loading | generating data
-    classCount = 5
+    classCount = 4
     elemCount = 100
     data = generateData(classCount, elemCount)
     saveData(data, f"data{classCount}Class.txt")
